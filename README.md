@@ -25,7 +25,7 @@
 
     //Request payment authorization - redirects to the banks page
     $bankPaymentGateway
-                ->requestAuthorization($webServiceReservation->getReservationAmount(), $code, $paymentDescription, $webServiceReservation->getEmail())
+                ->requestAuthorization($amount, $code, $paymentDescription, $email)
     ;
 
     //Request payment reversal
@@ -34,24 +34,6 @@
     ;
 
 ######Receive bank responses - all bank responses are server to server and are handled by same URI
-    use Service\Victoriabank;
-    $bankPaymentGateway = new Victoriabank();
-
-    //Set basic info
-    $bankPaymentGateway
-                ->setMerchantName('Your company name')
-                ->setMerchantAddress('Your company address')
-                ->setMerchantUrl('http://' . $_SERVER['HTTP_HOST'])
-                ->setTimezoneName('Europe/Chisinau')
-                ->setLanguage('ro')
-                ->setCountryCode('md')
-                ->setBackRefUrl('https://' . $_SERVER['HTTP_HOST'] . '/after-payment')
-    ;
-
-    //Set security options - provided by the bank
-    $bankPaymentGateway
-                ->setSecurityOptions($signatureFirst, $signaturePrefix, $signaturePadding, $publicKeyPath, $privateKeyPath, $bankPublicKeyPath)
-    ;
 
     $bankResponse       = $bankPaymentGateway->getResponseObject($_POST);
     $bankOrderCode      = $bankResponse->{Victoriabank\Response::ORDER};
@@ -96,7 +78,7 @@ add a following line (root-only) into your composer.json
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/TerranetMD/paginator.git"
+            "url": "https://github.com/TerranetMD/php-victoriabank-payment"
         }
     ]
 
@@ -106,4 +88,4 @@ run
 
 ###### Via GitHub
 
-    git clone https://github.com/TerranetMD/paginator.git
+    git clone https://github.com/TerranetMD/php-victoriabank-payment
