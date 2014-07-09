@@ -1,0 +1,21 @@
+{
+    "name": "terranetmd/php-victoriabank-payment",
+    "description": "Victoriabank payment gateway integration",
+    "type": "library",
+    "keywords": [
+        "terranet",
+        "payment gateway",
+        "victoriabank"
+    ],
+    "homepage": "https://github.com/TerranetMD/php-victoriabank-payment",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src"
+        }
+    },
+    "include-path": ["src/"]
+}
