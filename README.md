@@ -34,7 +34,7 @@
                 ->requestReversal($amount,$orderId,$rrn,$intRef)
     ;
 
-######Receive bank responses - all bank responses are server to server and are handled by same URI
+######Receive bank responses - all bank responses are asynchronous server to server and are handled by same URI
 
     $bankResponse       = $bankPaymentGateway->getResponseObject($_POST);
 
