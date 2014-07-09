@@ -3,7 +3,7 @@
 
 #### Usage
 
-######Request authorization
+######Request authorization && completion
     use Service\Victoriabank;
     $bankPaymentGateway = new Victoriabank();
 
