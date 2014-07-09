@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-## Victoriabank payment gateway
-
 #### Requirements
 * PHP > 5.4
 
@@ -110,9 +107,3 @@ run
 ###### Via GitHub
 
     git clone https://github.com/TerranetMD/paginator.git
-=======
-php-victoriabank-payment
-========================
-
-Victoriabank payment gateway integration with pure PHP
->>>>>>> 7ec497c1c5d6a6ab2864e69d453d54fa51053bcf
