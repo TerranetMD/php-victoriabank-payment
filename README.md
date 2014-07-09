@@ -28,6 +28,7 @@
                 ->requestAuthorization($amount, $code, $paymentDescription, $email)
     ;
 
+######Request reversal
     //Request payment reversal
     $bankPaymentGateway
                 ->requestReversal($amount,$orderId,$rrn,$intRef)
