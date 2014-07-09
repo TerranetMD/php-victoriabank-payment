@@ -37,9 +37,6 @@
 ######Receive bank responses - all bank responses are server to server and are handled by same URI
 
     $bankResponse       = $bankPaymentGateway->getResponseObject($_POST);
-    $bankOrderCode      = $bankResponse->{Victoriabank\Response::ORDER};
-    $systemOrderCode    = $paymentGateway->deNormalizeOrderId($bankOrderCode);
-    $verificationCode   = $bankResponse->{Victoriabank\Response::RRN};
 
     if (!$bankResponse->isValid())
         throw new Victoriabank\Exception('Invalid bank Auth response');
