@@ -1,6 +1,6 @@
 <?php
 
-namespace Service\Victoriabank;
+namespace Terranet\Payment\Victoriabank;
 
 /**
  * Class Response

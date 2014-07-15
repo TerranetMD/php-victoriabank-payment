@@ -1,6 +1,6 @@
 <?php
 
-namespace Service\Victoriabank;
+namespace Terranet\Payment\Victoriabank;
 
 class Authorization_Response extends Response{
 

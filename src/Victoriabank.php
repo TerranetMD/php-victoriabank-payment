@@ -1,8 +1,8 @@
 <?php
 
-namespace Service;
+namespace Terranet\Payment;
 
-use Service\Victoriabank as VB;
+use Terranet\Payment\Victoriabank as VB;
 
 class Victoriabank{
 
