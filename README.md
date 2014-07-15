@@ -4,7 +4,7 @@
 #### Usage
 
 ######Request authorization && completion
-    use Service\Victoriabank;
+    use Terranet\Payment;
     $bankPaymentGateway = new Victoriabank();
 
     //Set basic info
